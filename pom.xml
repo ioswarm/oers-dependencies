@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>ioswarm</groupId>
+	<artifactId>oers-dependencies</artifactId>
+	<version>0.1.0-SNAPSHOT</version>
+	
+	<name>OERS Stack - OERS components</name>
+	<packaging>pom</packaging>
+	
+	<properties>
+		<stack.version>0.1.0-SNAPSHOT</stack.version>
+		<osgi.version>5.0.0</osgi.version>
+		<vertx.version>3.3.3</vertx.version>
+		<ioswarm.vertx.version>0.1.0</ioswarm.vertx.version>
+		<jackson.version>2.7.4</jackson.version>
+		<netty.version>4.1.5.Final</netty.version>
+		<slf4j.version>1.7.21</slf4j.version>
+		<log4j.version>1.2.17</log4j.version>
+		<typesafe.version>1.3.1</typesafe.version>
+		<hazelcast.version>3.6.3</hazelcast.version>
+		<junit.version>4.12</junit.version>
+	</properties>	
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>ioswarm</groupId>
+				<artifactId>oers-core</artifactId>
+				<version>${stack.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>ioswarm</groupId>
+				<artifactId>vertx-service</artifactId>
+				<version>${ioswarm.vertx.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>ioswarm</groupId>
+				<artifactId>vertx-cassandra-driver</artifactId>
+				<version>${ioswarm.vertx.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>ioswarm</groupId>
+				<artifactId>vertx-event-sourcing</artifactId>
+				<version>${ioswarm.vertx.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>ioswarm</groupId>
+				<artifactId>vertx-es-cassandra</artifactId>
+				<version>${ioswarm.vertx.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.osgi</groupId>
+				<artifactId>org.osgi.core</artifactId>
+				<version>${osgi.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.vertx</groupId>
+				<artifactId>vertx-core</artifactId>
+				<version>${vertx.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.vertx</groupId>
+				<artifactId>vertx-web</artifactId>
+				<version>${vertx.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.vertx</groupId>
+				<artifactId>vertx-hazelcast</artifactId>
+				<version>${vertx.version}</version>
+			</dependency>
+			
+			<!-- Jackson -->
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-core</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-annotations</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			<!-- Netty -->
+			<dependency>
+				<groupId>io.netty</groupId>
+				<artifactId>netty-transport</artifactId>
+				<version>${netty.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.netty</groupId>
+				<artifactId>netty-buffer</artifactId>
+				<version>${netty.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.netty</groupId>
+				<artifactId>netty-codec</artifactId>
+				<version>${netty.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.netty</groupId>
+				<artifactId>netty-codec-dns</artifactId>
+				<version>${netty.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.netty</groupId>
+				<artifactId>netty-codec-http</artifactId>
+				<version>${netty.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.netty</groupId>
+				<artifactId>netty-codec-http2</artifactId>
+				<version>${netty.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.netty</groupId>
+				<artifactId>netty-codec-socks</artifactId>
+				<version>${netty.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.netty</groupId>
+				<artifactId>netty-common</artifactId>
+				<version>${netty.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.netty</groupId>
+				<artifactId>netty-handler</artifactId>
+				<version>${netty.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.netty</groupId>
+				<artifactId>netty-handler-proxy</artifactId>
+				<version>${netty.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.netty</groupId>
+				<artifactId>netty-resolver</artifactId>
+				<version>${netty.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.netty</groupId>
+				<artifactId>netty-resolver-dns</artifactId>
+				<version>${netty.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.hazelcast</groupId>
+				<artifactId>hazelcast</artifactId>
+				<version>${hazelcast.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.typesafe</groupId>
+				<artifactId>config</artifactId>
+				<version>${typesafe.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+</project>
